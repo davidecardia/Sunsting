@@ -1,0 +1,80 @@
+[
+  {
+    "id" : "1",
+    "firstname": "Michelle",
+    "lastname" : "Obama",
+    "avatar" : "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NDg0MDU0ODEyNzIyNzAz/michelle-obama-thumb-2.jpg",
+    "city": "New York",
+    "birthdate" : "29/11/1972",
+    "email": "davide@email.it",
+    "username": "admin",
+    "password": "123456",
+    "token": "fsnr87ct48734r8ft8e"
+  },
+  {
+    "id" : "2",
+    "firstname":  "Barack",
+    "lastname" : "Obama",
+    "avatar" : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/220px-Official_portrait_of_Barack_Obama.jpg",
+    "city": "New York",
+    "birthdate" : "08/08/1966",
+    "email": "alessandro@gmail.com",
+    "password": "123456",
+    "token": "nhghnhnsnr87gfdg54bg4wbg5"
+  },
+
+  { "id" : "3",
+    "firstname":  "Nicole",
+    "lastaname" : "Kidman",
+    "birthdate" : "24/05/1968",
+    "avatar" : "https://biografieonline.it/img/bio/n/Nicole_Kidman.jpg",
+    "city": "Miami",
+    "email": "alessandro@gmail.com",
+    "password": "123456",
+    "token": "nhghnhnsnr87gfdg54bg4wbg5"
+  },
+
+  { "id" : "4",
+    "firstname":  "Tom",
+    "lastaname" : "Cruise",
+    "birthdate" : "17/05/1971",
+    "avatar" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Tom_Cruise_avp_2014_3.jpg/220px-Tom_Cruise_avp_2014_3.jpg",
+    "citta": "Cagliari",
+    "email": "alessandro@gmail.com",
+    "password": "123456",
+    "token": "nhghnhnsnr87gfdg54bg4wbg5"
+  },
+
+  { "id" : "5",
+    "firstname":  "Greta",
+    "lastname" : "Thunberg",
+    "birthdate" : "10/01/2005",
+    "avatar" : "https://www.tpi.it/app/uploads/2019/03/greta-thunberg-1.jpg",
+    "city": "Berlino",
+    "email": "alessandro@gmail.com",
+    "password": "123456",
+    "token": "nhghnhnsnr87gfdg54bg4wbg5"
+  },
+  { "id" : "6",
+    "firstname":  "Dalai",
+    "lastname" : "Lama",
+    "birthdate" : "04/05/1954",
+    "avatar" : "http://www.samantabhadra.org/wordpress/wp-content/uploads/2019/04/18813225_10154682728977616_2436837945204926753_n.jpg",
+    "city": "Hong Kong",
+    "email": "pinco@email.it",
+    "password": "123456",
+    "token": "dsasdr87ct4g55ggxgg5ys"
+  },
+  {
+    "id" : "1",
+    "firstname": "Michelle",
+    "lastname" : "Hunziker",
+    "avatar" : "https://th.gossipblog.it/teaghHgqKOsjAS497FNYibCU01w=/fit-in/655xorig/https%3A%2F%2Fmedia.gossipblog.it%2F2%2F276%2Fmichelle-hunziker-schwanger-baby-4-e1557984207892.jpg",
+    "city": "Milano",
+    "birthdate" : "29/11/1975",
+    "email": "davide@email.it",
+    "username": "admin",
+    "password": "123456",
+    "token": "fsnr87ct48734r8ft8e"
+  }
+]

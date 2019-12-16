@@ -1,0 +1,24 @@
+@import '../../../theme/variables.scss';
+ion-toggle{
+  --handle-background-checked: #f46b45;
+  --background-checked: rgba(127,140,141,.4);
+}
+
+
+.settings{
+    --background: #f7fafd !important;
+    &--label{
+      color:#f46b45;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    &--list{
+      border-radius:5px;
+      border-left: 6px solid #f46b45;
+      margin-top: 10px;
+      ion-icon{
+        color: $titleColor;
+      }
+    }
+}
+

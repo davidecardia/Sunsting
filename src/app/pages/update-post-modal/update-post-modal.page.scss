@@ -1,0 +1,76 @@
+@import '../../../theme/variables.scss';
+.new-post--header--icon{
+  font-size: 45px;
+  padding:5px;
+  color: $menuLabelColor;
+  cursor: pointer;
+}
+
+.new-post{
+  &--avatar{
+    --size: 50px;
+    cursor: pointer;
+    margin:auto;
+    position: relative;
+    z-index: 1000 !important;
+    img{
+      border-radius: 50% !important;
+    }
+  }
+  &--select{
+    border: 1px solid $secondColor;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding:5px;
+  }
+  &--text-input{
+    padding:0;
+    margin:0;
+    position:relative;
+  }
+
+
+
+  &--footer{
+    bottom:0;
+    position: absolute;
+    &--icon{
+      color:$secondColor;
+      cursor: pointer;
+    }
+    &--label{
+      color:$titleColor;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding:5px;
+      &:hover{
+        color: $secondColor;
+      }
+    }
+    &--file-input{
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+      cursor: pointer;
+    }
+    &-file-input label{
+      color: #717171;
+      background-color: white;
+      display: inline-block;
+      cursor: pointer;
+      padding: .5em 1em;
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+
+
+
+

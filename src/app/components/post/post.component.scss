@@ -1,0 +1,102 @@
+@import '../../../theme/variables.scss';
+
+
+.post{
+  position:relative;
+  overflow: visible;
+  /*box-shadow: none !important;*/
+  padding:0 !important;
+  &--header{
+    &--avatar{
+        --size: 50px;
+        cursor: pointer;
+        img{
+          border-radius: 50% !important;
+          padding:5px;
+        }
+    }
+    &--name{
+      position:relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &--label{
+        cursor: pointer;
+      }
+    }
+    &--category{
+      transform: translate(10px, 10px);
+      z-index:100;
+      position:relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding:0!important;
+      margin:0!important;
+      &--label{
+        background:linear-gradient(to right, #eea849, #f46b45);
+        text-align: right;
+        position:relative;
+        padding:5px 5px 5px 20px;
+        color:#fff;
+        opacity: .8;
+        margin:0;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 11px;
+      }
+    }
+  }
+  &--content{
+    &--media{
+    }
+    &--text{
+      margin:10px;
+    }
+  }
+  &--footer{
+    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0% 100%);
+    &--icon{
+      color:#fff;
+    }
+    &--text{
+      color:#fff;
+    }
+  }
+}
+
+//War
+.WAR{
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+//Poverty
+.POVERTY{
+  background: linear-gradient(to right, #00b4db, #0083b0);
+}
+
+//Disease
+.DISEASE{
+  background: linear-gradient(to right, #fceabb, #f8b500);
+}
+
+//Science
+.SCIENCE{
+  background: linear-gradient(to right, #7f00ff, #e100ff);
+}
+
+//Climate change
+.CLIMATE_CHANGES{
+  background: linear-gradient(to right, #093028, #237a57);
+}
+
+//Social Inequity
+.SOCIAL_INEQUALITY{
+  background: linear-gradient(to right, #cb2d3e, #ef473a);
+}
+
+
+
+
+
+
+

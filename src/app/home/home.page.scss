@@ -1,0 +1,7 @@
+@import "../../theme/variables";
+.tab-bar{
+  &--button{
+    --color:  $menuIconColor!important;
+    --color-selected: #f46b45 !important;
+  }
+}

@@ -1,0 +1,21 @@
+<ion-app>
+    <ion-split-pane>
+        <ion-menu type="overlay" class="menu">
+            <ion-content>
+                <ion-list lines="none" class="menu--list">
+                    <ion-menu-toggle *ngFor="let p of appPages" auto-hide="false" class="menu--list--toggle">
+                        <ion-item *ngIf="(p.title !=='Login' && p.status) || (p.title =='Login' && !p.status)" [routerDirection]="'root'"
+                                  [routerLink]="[p.url]"  class="menu--list--toggle--item">
+                            <ion-icon [name]="p.icon" slot="start" class="menu--list--toggle--item--icon"></ion-icon>
+                            <ion-label class="menu--list--toggle--item--label">
+                                {{p.title}}
+                            </ion-label>
+                        </ion-item>
+                    </ion-menu-toggle>
+                </ion-list>
+                <ion-icon (click)="onSubmit()" *ngIf="isLoggedIn" class="menu--logout-button" name="log-out"></ion-icon>
+            </ion-content>
+        </ion-menu>
+        <ion-router-outlet main></ion-router-outlet>
+    </ion-split-pane>
+</ion-app>

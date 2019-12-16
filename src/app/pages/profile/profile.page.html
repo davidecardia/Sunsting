@@ -1,0 +1,51 @@
+<app-header title="{{title}}"></app-header>
+
+<ion-content>
+    <!--PROFILE HEADER CARD-->
+    <div>
+        <ion-card  class="profile" color="personal">
+            <ion-row>
+                <ion-col size="12">
+                    <ion-avatar class="profile--avatar">
+                        <img src="https://i.pravatar.cc/150?img={{user.id}}" >
+                    </ion-avatar>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col size="12">
+                    <div class="profile--label">
+                        <div class="profile--label--name">
+                            {{user.firstName}} {{user.lastName}}
+                        </div>
+                        <div class="profile--label--place">
+                            <ion-icon name="pin"></ion-icon>
+                            London
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+        <ion-segment class="profile--segment">
+            <ion-segment-button class="profile--segment--button" >
+                <ion-label class="profile--segment--button--label">Follower</ion-label>
+                <ion-text class="profile--segment--button--text">366</ion-text>
+            </ion-segment-button>
+            <ion-segment-button class="profile--segment--button">
+                <ion-label class="profile--segment--button--label">Following</ion-label>
+                <ion-text class="profile--segment--button--text">244</ion-text>
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+    <app-post [posts]="filteredPost"></app-post>
+</ion-content>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+<app-header title="{{title}}"></app-header>
+<ion-content>
+    <ion-item>
+        <ion-input #name ></ion-input>
+        <ion-icon (click)="searchUsers(name.value)" name="search"></ion-icon>
+    </ion-item>
+
+
+    <ion-list *ngFor="let user of filteredUsers">
+        <ion-item>
+            <ion-avatar slot="start">
+                <img src="{{user.avatar}}">
+            </ion-avatar>
+            <ion-label>{{user.firstname}} {{user.lastname}}</ion-label>
+        </ion-item>
+
+    </ion-list>
+    <ion-item *ngIf="!exists">
+
+        <ion-label>User not found..</ion-label>
+    </ion-item>
+
+
+</ion-content>
+
+

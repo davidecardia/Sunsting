@@ -1,0 +1,51 @@
+@import '../../../theme/variables';
+.menu {
+  --ion-background-color: linear-gradient(to right, #eea849, #f46b45);
+  --ion-text-color: linear-gradient(to right, #eea849, #f46b45);
+
+  &--list {
+    background: transparent;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--toggle {
+      &--item {
+        &:hover &--label {
+          color: $firstColor;
+        }
+
+        &:hover &--icon {
+          transform: rotate(15deg) !important;
+        }
+
+        &--icon {
+          color: $menuIconColor;
+
+        }
+
+        &--label {
+          text-transform: uppercase;
+          font-weight: 400;
+          letter-spacing: 1.5px;
+          color: $menuLabelColor;
+        }
+      }
+    }
+  }
+  &--logout-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+  }
+}
+
+
+
+
+
+
+

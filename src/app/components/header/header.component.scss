@@ -1,0 +1,33 @@
+@import "./../../../theme/variables";
+
+.sunsting-header{
+  &--toolbar{
+    &--buttons{
+      &--button{
+        color: $firstColor;
+      }
+    }
+    &--item{
+      --ion-background-color: transparent !important;
+      &--logo{
+        max-width: 50%;
+      }
+      &--title{
+        color: $menuLabelColor;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

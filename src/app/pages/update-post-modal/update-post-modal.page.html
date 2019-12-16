@@ -1,0 +1,65 @@
+<ion-app>
+  <ion-header >
+    <ion-toolbar color="personal">
+      <ion-icon class="new-post--header--icon" slot="end" name="close" (click)="closeModal()"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="new-post">
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form)" class="new-post--form">
+      <ion-row>
+        <ion-col>
+          <ion-thumbnail class="new-post--avatar">
+            <img src="https://i.pravatar.cc/150?img=5" *ngIf="user.id === 1">
+          </ion-thumbnail>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-select selectedText="{{privacyLevel}}" class="new-post--select" formControlName="privacyLevel" okText="Okay" cancelText="Dismiss" placeholder="Privacy">
+            <ion-select-option value="PUBLIC">Public</ion-select-option>
+            <ion-select-option value="PRIVATE">Private</ion-select-option>
+          </ion-select>
+        </ion-col>
+        <ion-col>
+          <ion-select selectedText="{{contentType}}" class="new-post--select"formControlName="contentType" placeholder="Type">
+            <ion-select-option value="POST">Post</ion-select-option>
+            <ion-select-option value="COMMITMENT">Commitment</ion-select-option>
+            <ion-select-option value="ONPROJECT">On Project</ion-select-option>
+            <ion-select-option value="ADVERTISING">Advertising</ion-select-option>
+          </ion-select>
+        </ion-col>
+        <ion-col>
+          <ion-select  selectedText="{{topic}}" class="new-post--select" formControlName="topicId"  okText="Okay" cancelText="Dismiss" placeholder="Topic">
+            <ion-select-option value=2>Poverty</ion-select-option>
+            <ion-select-option value=1>War</ion-select-option>
+            <ion-select-option value=3>Disease</ion-select-option>
+            <ion-select-option value="5">Climate Changes</ion-select-option>
+            <ion-select-option value="6">Social Inequity</ion-select-option>
+            <ion-select-option value="4">Science</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-textarea rows="15" formControlName="content" margin> {{content}} </ion-textarea>
+      <ion-footer class="new-post--footer" translucent>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon class="new-post--footer--icon" slot="icon-only" name="camera"></ion-icon>
+            </ion-button>
+            <ion-button>
+              <input type="file" name="file" id="file" class="new-post--footer--file-input"/>
+              <label for="file">
+                <ion-icon slot="icon-only" class="new-post--footer--icon" name="images"></ion-icon></label>
+            </ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button type="submit">
+              <ion-label class="new-post--footer--label">Pubblica</ion-label>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-footer>
+    </form>
+  </ion-content>
+</ion-app>
+

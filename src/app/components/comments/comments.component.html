@@ -1,0 +1,30 @@
+<div class="comment">
+<div class="comment-list" *ngFor="let c of comments">
+  <ion-item lines="none" class="comment--item" *ngIf="idPost == c.idPost">
+    <ion-avatar slot="start" class="comment--item--avatar">
+      <img src="{{c.avatar}}">
+    </ion-avatar>
+    <ion-label class="comment--item--label">
+      <h2>{{c.author}}</h2>
+      <p>{{c.text}}</p>
+    </ion-label>
+  </ion-item>
+</div>
+
+<ion-row class="comment--content" >
+  <ion-col size="12" >
+    <ion-item lines="none">
+      <ion-textarea class="comment--content--text" clearOnEdit="true" placeholder="Leave a comment here.." ></ion-textarea>
+      <ion-icon class="comment--content--icon comment--icon" slot="end" name="send"></ion-icon>
+    </ion-item>
+  </ion-col>
+</ion-row>
+</div>
+
+
+
+
+
+
+
+

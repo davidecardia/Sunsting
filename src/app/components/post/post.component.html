@@ -1,0 +1,54 @@
+<ion-card *ngFor="let post of posts" class="post">
+    <ion-card-header no-padding no-margin class="post--header">
+        <ion-row *ngIf="post.owner">
+            <ion-col class="post--header--avatar" size="2">
+                <ion-thumbnail (click)="visitProfile(post.owner.id)" class="post--header--avatar">
+                    <img src="https://i.pravatar.cc/150?img={{post.owner.id}}" alt="{{post.owner.firstName}}">
+                </ion-thumbnail>
+            </ion-col>
+            <ion-col class="post--header--name">
+                <ion-label (click)="visitProfile(post.owner.id)" class="post--header--name--label">
+                    <span *ngIf="post.owner.firstName && post.owner.lastName">{{post.owner.firstName}}
+                        {{post.owner.lastName}}</span>
+                </ion-label>
+            </ion-col>
+            <ion-col class="post--header--category" *ngIf="post.topic && post.topic.name">
+                <ion-label [ngClass]="post.topic.name | removewhitespaces" class="post--header--category--label">
+                    {{post.topic.name}}</ion-label>
+            </ion-col>
+        </ion-row>
+    </ion-card-header>
+    <ion-card-content (click)="openModal(post.id)" no-padding class="post--content" *ngIf="post.content">
+        <ion-row class="post--content--media">
+            <img src="https://picsum.photos/300/200" alt="">
+        </ion-row>
+        <ion-row class="post--content--text">
+            {{post.content}}
+        </ion-row>
+    </ion-card-content>
+    <ion-item class="post--footer" color="personal" lines="none">
+        <!--        <ion-icon margin-top (click)="likePost(post.id,post.owner.id)" class="post&#45;&#45;footer&#45;&#45;icon" name="heart"></ion-icon>-->
+        <!--        <ion-text class="post&#45;&#45;footer&#45;&#45;text" slot="start" *ngIf="post.likes && post.likes.length !== 0"></ion-text>-->
+        <ion-text slot="start">
+            {{post.likes.length}}
+            <ion-icon class="post--footer--icon" margin-top (click)="likePost(post.id,post.owner.id)" name="heart">
+            </ion-icon>
+        </ion-text>
+        <ion-text slot="start" class="post--footer--text">
+            <ion-icon class="post--footer--icon" margin-top (click)="openComments(post.id)" name="list-box"></ion-icon>
+        </ion-text>
+        <ion-text class="post--footer--text" slot="end"
+            *ngIf="post.privacyLevel && post.privacyLevel.name == 'PRIVATE'">
+            <ion-icon class="post--footer--icon" margin-top name="lock"></ion-icon>
+        </ion-text>
+        <ion-text class="post--footer--text" slot="end" *ngIf="post.privacyLevel && post.privacyLevel.name == 'PUBLIC'">
+            <ion-icon class="post--footer--icon" margin-top name="globe"></ion-icon>
+        </ion-text>
+        <ion-text *ngIf="this.authService.getUsername() === post.owner.username" class="post--footer--text" slot="end"
+            (click)="optionsPost($event,post.id)">
+            <ion-icon class="post--footer--icon" margin-top name="more"></ion-icon>
+        </ion-text>
+    </ion-item>
+    <app-comments [idPost]="idPost" [commentsPost]="commentsPost" *ngIf="commentsPost && idPost == post.id">
+    </app-comments>
+</ion-card>

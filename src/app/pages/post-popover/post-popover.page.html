@@ -1,0 +1,17 @@
+<ion-list class="popover--list">
+    <ion-item lines="none" class="popover--list--item">
+        <ion-icon class="popover--list--item--icon" slot="end" name="close" class="close" (click)="closePopover()"></ion-icon>
+    </ion-item>
+    <ion-item class="popover--list--item" lines="none" (click)="editPost()">
+        <ion-icon class="popover--list--item--icon" name="create"></ion-icon>
+        <ion-label class="popover--list--item--label">Edit</ion-label>
+    </ion-item>
+    <ion-item class="popover--list--item" (click)="deletePost()" lines="none">
+        <ion-icon class="popover--list--item--icon" name="trash"></ion-icon>
+        <ion-label class="popover--list--item--label">Delete</ion-label>
+    </ion-item>
+</ion-list>
+
+
+
+

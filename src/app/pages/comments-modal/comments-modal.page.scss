@@ -1,0 +1,91 @@
+@import '../../../theme/variables.scss';
+.comment--icon{
+  font-size: 40px;
+  padding:5px;
+  color: $menuLabelColor;
+  cursor: pointer;
+}
+.comment--content {
+  --background: transparent !important;
+
+  &--list {
+    background: transparent !important;
+  }
+
+  &--input {
+    position: fixed;
+    bottom: 0;
+    &--icon{
+      color: $secondColor;
+    }
+  }
+}
+
+
+.card-border{
+  box-shadow: none !important;
+}
+
+.post{
+  position:relative;
+  /*box-shadow: none !important;*/
+  padding:0 !important;
+  &--header{
+    &--avatar{
+      --size: 50px;
+      cursor: pointer;
+      img{
+        border-radius: 50% !important;
+        padding:5px;
+      }
+    }
+    &--name{
+      position:relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &--label{
+        cursor: pointer;
+      }
+    }
+    &--category{
+      position:relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding:0!important;
+      margin:0!important;
+      &--label{
+        background:linear-gradient(to right, #eea849, #f46b45) !important;
+        text-align: right;
+        position:relative;
+        padding:5px 5px 5px 20px;
+        color:#fff;
+        opacity: .8;
+        margin:0;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 11px;
+      }
+    }
+  }
+  &--content{
+    &--media{
+    }
+    &--text{
+      margin:10px;
+    }
+  }
+  &--footer{
+    clip-path: polygon(0 0, 100% 35%, 100% 100%, 0% 100%);
+    &--icon{
+      color:#fff;
+    }
+    &--text{
+      color:#fff;
+    }
+  }
+}
+
+
+
